@@ -1,0 +1,1 @@
+Electron app that combines Azure Speech Service and ChatGPT to create an immersive japanese language teacher
