@@ -57,23 +57,14 @@ ipcRenderer.on('translation-result', (event, assistantMessageContent) => {
   questionContainer.appendChild(questionElement);
   outputText.appendChild(questionContainer);
 
-  
-// Create and append the answer
-const answerContainer = document.createElement('div');
-const answerElement = document.createElement('span');
-answerElement.innerHTML = 'A: ' + assistantMessageContent.trim();
-answerContainer.appendChild(answerElement);
-
-// Add the speech button to the answer container
-const speechButton = document.createElement('button');
-speechButton.style.marginLeft = '5px';
-speechButton.style.backgroundColor = 'grey';
-speechButton.innerHTML = '&#128266;';
-speechButton.onclick = () => synthesizeSpeech(assistantMessageContent.trim());
-answerContainer.appendChild(speechButton);
-
-outputText.appendChild(answerContainer);
-
+  // Create and append the answer
+  const answerContainer = document.createElement('div');
+  const answerElement = document.createElement('span');
+  answerElement.innerHTML = 'A: ' + assistantMessageContent.trim();
+  answerContainer.appendChild(answerElement);
+  outputText.appendChild(answerContainer);
 
   loader.style.display = 'none';
 });
+
+
