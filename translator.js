@@ -11,7 +11,7 @@ async function translate(inputText) {
     const completion = await openai.createChatCompletion({
       model: 'gpt-3.5-turbo',
       messages: [
-        { role: 'system', content: 'You are a japanese teacher, you will help me pass JLPT N3' },
+        { role: 'system', content: 'You are a japanese teacher, you will help me pass JLPT N3. You will only speak to me in Japanese and only in english if I ask you to.' },
         { role: 'user', content: inputText }
       ],
     });

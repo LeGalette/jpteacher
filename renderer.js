@@ -48,7 +48,7 @@ sendQuestionBtn.addEventListener('click', () => {
 
 ipcRenderer.on('translation-result', (event, assistantMessageContent) => {
   const outputText = document.getElementById('output-text');
-  outputText.innerHTML = '';
+  
 
   const lines = assistantMessageContent.trim().split('\n');
   lines.forEach(line => {
